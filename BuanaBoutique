@@ -1,0 +1,41 @@
+import java.util.Scanner;
+public class BuanaBoutique {
+    public static void main(String[] args) {
+        System.out.println("Buana Boutique ");
+        System.out.println("----------------------------");
+        Scanner in = new Scanner(System.in);
+        String dress;
+        int harga=0;
+        int kembalian=0;
+        int uang=0;
+        System.out.println("Pilih dress berikut!");
+        System.out.println("1. Midi dress");
+        System.out.println("2. Sheat dress");
+        System.out.println("3. Denim dress");
+        System.out.println("4. Kimono dress");
+        System.out.println("5. Ballgown dress");
+        dress = in.nextLine();
+        
+        switch (dress){
+            case "Midi dress":harga=175000;System.out.println("Harga Midi dress 175000");break;
+            case "Sheat dress":harga=213000;System.out.println("Harga Sheat dress 213000");break;
+            case "Denim dress":harga=265000;System.out.println("Harga Denim dress 265000");break;
+            case "Kimono dress":harga=198000;System.out.println("Harga Kimono dress 198000");break;
+            case "Ballgown dress":harga=754000;System.out.println("Harga Ballgown dress 754000");break;
+            default: System.out.println("Maaf, dress tidak tersedia");break;
+       
+        }
+        System.out.println("Uang anda: ");
+        uang=in.nextInt();
+        kembalian=uang-harga;
+        if(uang>harga){
+        System.out.println("Kembalian anda: "+kembalian);
+        
+        }
+        if(uang<harga){
+            System.out.println("Maaf, uang anda tidak cukup");
+        }   
+        System.out.println("----------Hatur Nuhun----------");
+}
+
+}
